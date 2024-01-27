@@ -4,84 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculator Project</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.js">
 </head>
-<style>
-    *{
-    margin: 0;
-    padding: 0;
-}
-  
-h1 {  
-    text-align: center;  
-    padding: 0px;  
-    background-color: skyblue;  
-    color: white;  
-    }  
-  
-#clear{  
-width: 270px;  
-border: 2px solid gray;  
-    border-radius: 3px;  
-    padding: 10px;  
-    background-color: red;  
-}  
-  
-.formstyle  
-{  
-width: 300px;  
-height: 450px;  
-margin: auto;  
-border: 3px solid skyblue;  
-border-radius: 5px;  
-padding: 10px;  
-}  
-  
-  
-  
-input  
-{  
-    width: 30px;  
-    background-color: #1F2326;  
-    color: white;  
-    border: 3px solid yellow;  
-    border-radius: 5px;  
-    padding: 26px;  
-    margin: 6px;  
-    font-size: 20px;  
-}  
-  
-  
-#calc{  
-    
-    width: 250px;  
-    border: 3px solid black;  
-    border-radius: 2px;  
-    padding: 20px;  
-    margin: auto;  
-}  
 
-</style>  
-  
- 
-</style>
 <body>
     <h1>calculator</h1>
 
     <div class= "formstyle">  
 <form name = "form1">  
       
-     <input autofocus class="main_input" id = "calc" type ="text" name = "answer" placeholder="calculate here"> <br>
+     <input autofocus class="main_input" id = "calc" type ="text" name = "answer" placeholder="calculate here" maxlength="5"/> <br>
 
   <input type = "button" value = "1" onclick = "form1.answer.value += '1' ">  
 
   <!-- <input type="button" value="1" onclick="form1.answer.value = form1.answer.value + '1' "> -->
 
 
-  <input type = "button" value = "2" onclick = "form1.answer.value += '2' ">  
+  <input maxlength="1" type = "button" value = "2" onclick = "form1.answer.value += '2' "/>  
   <input type = "button" value = "3" onclick = "form1.answer.value += '3' ">  
-   <input oni oninput="restrictCharacter('+')" type = "button" value = "+" onclick = "form1.answer.value += '+' "/>  
+   <input  type = "button" value = "+" onclick = "form1.answer.value += '+' "/>  
   
     
   <input type = "button" value = "4" onclick = "form1.answer.value += '4' ">  
@@ -105,11 +47,13 @@ input
 
   <br>   
 
-  <input type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >  
+ 
   <br>
 </form>
 </div>
-
+<div class="clear">
+     <input type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >  
+</div>
 
 </body>
 </html>
